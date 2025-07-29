@@ -1,0 +1,8 @@
+pip
+scipy
+numpy
+matplotlib
+mplcursors
+control
+pandas
+bokeh
