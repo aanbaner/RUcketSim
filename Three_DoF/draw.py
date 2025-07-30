@@ -34,6 +34,7 @@ def draw_forces(ax: plt.Axes, forces: list[list[list[float]]], centers: list[lis
         ax.quiver(thrust_centers[0,:], thrust_centers[1,:], force_vectors[0,:], force_vectors[1,:], scale=scale, scale_units='x', color = 'black' if i >= len(colors) else colors[i])
 
 def draw_traj(ax: plt.Axes, t: list[float], y: list[list[float]], cmap: plt.Colormap = plt.cm.jet):
+    # adapted from @askewchan's answer at https://stackoverflow.com/questions/15617207/line-colour-of-3d-parametric-curve-in-pythons-matplotlib-pyplot
     for i in range(len(y[index.X])-1):
         ax.plot(y[index.X][i:i+2], y[index.Y][i:i+2], color=cmap(round(255 * t[i] / max(t))))
 
